@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DisplayLoteryResultController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="card sort">
+{% for current in tirage %}
+    
+    <div class="card-title">
+        <img src="https://media.fdj.fr/static/contrib/logos/2020-01/Logo%20Euromillions%20My%20Million%20%28Fond%20blanc%29.svg" alt="" class="logo-sort">
+        <div class="title">
+            <h1>Tirage du {{ current.drawn_at|format_datetime('full', 'none', locale='fr')  }}</h1>
+            <p>Résultats EuroMillions - My Million</p>
+        </div>        
+    </div>
+    
+    <div class="card-body">
+        <div class="numbers">
+        {% for result in current.results %}
+            {% if result.type == 'number' %}
+                <div class="boule">{{ result.value }}</div>
+            {% else %}
+                <div class="star">{{ result.value }}</div>
+            {% endif %}            
+        {% endfor %}
+        </div>
+        
+        <div class="my-million">
+            <span class="addon-name">My Million </span>
+        {% for addon in current.addons %}
+            <span class="addon-value"> {{ addon.value }}</span>
+        {% endfor %}
+        </div>
+    </div>
+{% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    font-size: 8px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.sort {
+    position: relative;
+    margin-top: 25vh;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .3);
+    width: 100%;
+}
+
+.logo-sort {
+    display: block;
+    margin: 1rem auto;
+}
+
+.title {
+    width: 40%;
+    margin: auto;
+}
+
+.title h1 {
+    font-weight: 600;
+}
+
+.title p {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.numbers, .my-million {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
+}
+
+.boule, .star {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    padding: auto;
+    text-align: center;
+    justify-content: center;
+    margin-right: .5rem;
+    align-items: center;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.boule {
+    background: blue;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.star {
+    width: 4rem;
+    height: 4rem;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    background: #FFDB33;
+    border-color: solid 1px rgba(255, 255, 255, .2);
+    color: black;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.addon-name {
+    margin: 1rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: blue;
+}
+
+.addon-value {
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+@media screen and (min-width: 720px) {
+    :root {
+        font-size: 10px;
+    }
+    .main {
+        width: 80%;
+    }
+    .card {
+        padding: 1rem;
+    }
+    
+}
+
+@media screen and (min-width: 996px) {
+    :root {
+        font-size: 12px;
+    }
+    .title {
+        margin: 0;
+        margin-left: 1rem;
+        width: 100%;
+    }
+    .sort {
+        width: auto;
+    }
+    .card-title {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    :root {
+        font-size: 14px;
+    }
+    .card-body {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    
+}
+
+@media screen and (min-width: 1800px) {
+    :root {
+        font-size: 16px;
+    }
+    
+}
