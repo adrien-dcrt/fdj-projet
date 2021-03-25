@@ -18,5 +18,4 @@ Génération des assets de production "yarn encore production"
 
 Modification de l'environnement pour mise en production
 
-Compte de tenu de la simplicité de l'outil je n'ai pas jugé utile de créer de test unitaire
 
